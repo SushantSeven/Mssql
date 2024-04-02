@@ -1,0 +1,18 @@
+-- SQL JOINS
+
+SELECT * FROM Orders;
+
+-- ALL THE ROWS FROM LEFT TABLE AND RIGHT TABLE
+SELECT * FROM Customers INNER JOIN Orders ON Orders.CustomerID = Customers.CustomerID;
+
+-- ALL THE ROWS FROM LEFT TABLE AND MATCHING ROWS FROM RIGHT TABLE
+SELECT * FROM Customers LEFT JOIN Orders ON Orders.CustomerID = Customers.CustomerID;
+
+-- ALL THE ROWS FROM RIGHT TABLE AND MATCHING ROWS FROM LEFT TABLE
+SELECT * FROM Customers RIGHT JOIN Orders ON Orders.CustomerID = Customers.CustomerID;
+
+-- OUTER JOIN
+SELECT * FROM Customers FULL JOIN Orders ON Orders.CustomerID = Customers.CustomerID;
+
+-- CROSS PRODCUCT
+SELECT * FROM Orders CROSS JOIN Orders2;
